@@ -9,8 +9,37 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        VStack {
+            MapView()
+                .frame(height: 300.0)
+                .ignoresSafeArea()
+            
+            CircleImage()
+                .offset(y: -130)
+                .padding(.bottom, -130)
+            
+            VStack(alignment: .leading) {
+                Text("turtle rock")
+                    .font(.title)
+                
+                HStack {
+                    Text("joshua tree national park")
+                        .font(.subheadline)
+                    Spacer()
+                    Text("california")
+                        .font(.subheadline)
+                }
+                
+                Divider()
+                
+                Text("about turtle rock")
+                    .font(.title2)
+                Text("description text goes here.")
+            }
             .padding()
+            
+            Spacer()
+        }
     }
 }
 

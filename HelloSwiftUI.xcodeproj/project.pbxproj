@@ -15,6 +15,10 @@
 		871F0E462679EE6600BE1D4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F0E222679EE6400BE1D4F /* ContentView.swift */; };
 		871F0E472679EE6600BE1D4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 871F0E232679EE6600BE1D4F /* Assets.xcassets */; };
 		871F0E482679EE6600BE1D4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 871F0E232679EE6600BE1D4F /* Assets.xcassets */; };
+		871F0E58267A032900BE1D4F /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F0E57267A032900BE1D4F /* CircleImage.swift */; };
+		871F0E59267A032900BE1D4F /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F0E57267A032900BE1D4F /* CircleImage.swift */; };
+		871F0E5B267A045100BE1D4F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F0E5A267A045100BE1D4F /* MapView.swift */; };
+		871F0E5C267A045100BE1D4F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F0E5A267A045100BE1D4F /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,8 @@
 		871F0E372679EE6600BE1D4F /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		871F0E3D2679EE6600BE1D4F /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		871F0E412679EE6600BE1D4F /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		871F0E57267A032900BE1D4F /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		871F0E5A267A045100BE1D4F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,8 @@
 				871F0E212679EE6400BE1D4F /* HelloSwiftUIApp.swift */,
 				871F0E222679EE6400BE1D4F /* ContentView.swift */,
 				871F0E232679EE6600BE1D4F /* Assets.xcassets */,
+				871F0E57267A032900BE1D4F /* CircleImage.swift */,
+				871F0E5A267A045100BE1D4F /* MapView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -284,7 +292,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				871F0E452679EE6600BE1D4F /* ContentView.swift in Sources */,
+				871F0E5B267A045100BE1D4F /* MapView.swift in Sources */,
 				871F0E432679EE6600BE1D4F /* HelloSwiftUIApp.swift in Sources */,
+				871F0E58267A032900BE1D4F /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				871F0E462679EE6600BE1D4F /* ContentView.swift in Sources */,
+				871F0E5C267A045100BE1D4F /* MapView.swift in Sources */,
 				871F0E442679EE6600BE1D4F /* HelloSwiftUIApp.swift in Sources */,
+				871F0E59267A032900BE1D4F /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
