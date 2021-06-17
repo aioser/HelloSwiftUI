@@ -1,50 +1,54 @@
 //
-//  ContentView.swift
-//  Shared
+//  LandMarkDetail.swift
+//  HelloSwiftUI
 //
-//  Created by sama 刘 on 2021/6/16.
+//  Created by sama 刘 on 2021/6/17.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct LandMarkDetail: View {
+    
+    var landMark: LandMark
+    
     var body: some View {
         VStack {
-            MapView()
+            MapView(coordinate: landMark.locationCoordinate)
                 .frame(height: 300.0)
                 .ignoresSafeArea()
             
-            CircleImage()
+            CircleImage(image: landMark.image)
                 .offset(y: -130)
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading) {
-                Text("turtle rock")
+                Text(landMark.name)
                     .font(.title)
                 
                 HStack {
-                    Text("joshua tree national park")
+                    Text(landMark.park)
                         .font(.subheadline)
                     Spacer()
-                    Text("california")
+                    Text(landMark.state)
                         .font(.subheadline)
                 }
                 
                 Divider()
                 
-                Text("about turtle rock")
+                Text("about \(landMark.name) rock")
                     .font(.title2)
-                Text("description text goes here.")
+                Text(landMark.description)
             }
             .padding()
             
             Spacer()
         }
+        .navigationTitle(Text(landMark.name))
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LandMarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LandMarkDetail(landMark: landMarks.first!)
     }
 }
