@@ -6,6 +6,24 @@
 //
 
 import Foundation
+import Combine
+
+final class ModelData: ObservableObject {
+    @Published var landMarks: [LandMark] = loader(from: "landmarkData.json")
+    var hikes: [Hike] = loader(from: "hikeData.json")
+    @Published var profile = Profile.default
+    
+    var categories: [String: [LandMark]] {
+        Dictionary(
+            grouping: landMarks,
+            by: { $0.category.rawValue}
+        )
+    }
+    
+    var features: [LandMark] {
+        landMarks.filter { $0.isFeatured }
+    }
+}
 
 func loader<T: Decodable>(from fileName: String) -> T {
     let data: Data
@@ -27,5 +45,3 @@ func loader<T: Decodable>(from fileName: String) -> T {
         fatalError("Couldn't parse \(fileName) as \(T.self):\n\(error)")
     }
 }
-
-let landMarks: [LandMark] = loader(from: "landmarkData.json")
